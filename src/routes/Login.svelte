@@ -1,37 +1,40 @@
-<script lang="ts">
+<script>
+  // Importamos la función `navigate` para redirigir a otras páginas
   import { navigate } from 'svelte-routing';
+
+  // Importamos el store de autenticación
   import { auth } from '../lib/stores/auth';
 
+  // Importamos la función para autenticar usuarios
+  import { authenticateUser } from '../lib/services/dataService';
+
+  // Variables para almacenar los datos del formulario
   let email = '';
   let password = '';
   let error = '';
 
+  // Manejo del envío del formulario
   async function handleSubmit() {
     try {
-      // Por ahora, simulamos el login
-      if (email === 'admin@example.com' && password === 'admin') {
-        auth.setUser({
-          id: '1',
-          email: 'admin@example.com',
-          role: 'admin'
-        });
-        navigate('/', { replace: true });
-      } else if (email === 'user@example.com' && password === 'user') {
-        auth.setUser({
-          id: '2',
-          email: 'user@example.com',
-          role: 'standard'
-        });
+      // Verificamos si las credenciales son correctas
+      const user = authenticateUser(email, password);
+      
+      if (user) {
+        // Si el usuario es válido, guardamos los datos en el store y redirigimos al inicio
+        auth.setUser(user);
         navigate('/', { replace: true });
       } else {
+        // Si las credenciales son incorrectas, mostramos un mensaje de error
         error = 'Credenciales inválidas';
       }
     } catch (e) {
+      // Capturamos cualquier error inesperado
       error = 'Error al iniciar sesión';
     }
   }
 </script>
 
+<!-- Contenedor del formulario de inicio de sesión -->
 <div class="login-container">
   <div class="login-card">
     <h1>Iniciar Sesión</h1>
@@ -59,6 +62,7 @@
         />
       </div>
 
+      <!-- Muestra un mensaje de error si la autenticación falla -->
       {#if error}
         <div class="error">{error}</div>
       {/if}
@@ -68,6 +72,7 @@
       </button>
     </form>
 
+    <!-- Información sobre credenciales de prueba -->
     <div class="demo-credentials">
       <p>Credenciales de prueba:</p>
       <code>admin@example.com / admin</code>
@@ -75,6 +80,7 @@
     </div>
   </div>
 </div>
+
 
 <style>
   .login-container {

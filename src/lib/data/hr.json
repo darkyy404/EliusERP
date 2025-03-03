@@ -1,0 +1,67 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Ana Martínez",
+      "department": "Desarrollo",
+      "position": "Senior Developer",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Carlos López",
+      "department": "Diseño",
+      "position": "UI/UX Designer",
+      "status": "vacation"
+    },
+    {
+      "id": "3",
+      "name": "María García",
+      "department": "Marketing",
+      "position": "Marketing Manager",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Juan Rodríguez",
+      "department": "Ventas",
+      "position": "Sales Executive",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Laura Sánchez",
+      "department": "Finanzas",
+      "position": "Financial Analyst",
+      "status": "active"
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "title": "Evaluación de Desempeño",
+      "description": "Departamento de Desarrollo",
+      "day": 15,
+      "month": "MAR"
+    },
+    {
+      "id": "2",
+      "title": "Capacitación",
+      "description": "Nuevas Tecnologías",
+      "day": 22,
+      "month": "MAR"
+    },
+    {
+      "id": "3",
+      "title": "Reunión de Equipo",
+      "description": "Todos los departamentos",
+      "day": 28,
+      "month": "MAR"
+    }
+  ],
+  "stats": {
+    "activeEmployees": 156,
+    "attendance": 92,
+    "pendingEvaluations": 15
+  }
+}

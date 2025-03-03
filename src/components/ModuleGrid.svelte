@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { modules } from '../lib/config/modules';
   import { auth } from '../lib/stores/auth';
   import ModuleCard from './ModuleCard.svelte';
@@ -6,7 +6,6 @@
     Wallet, Box, Users, BarChart3, FileText
   } from 'lucide-svelte';
 
-  // Objeto con los iconos disponibles
   const icons = {
     Wallet,
     Box,
@@ -15,9 +14,12 @@
     FileText
   };
 
-  // Filtrar módulos según el rol del usuario
-  $: filteredModules = modules
+ // Filtra los módulos disponibles según el rol del usuario autenticado.
+// Si no hay un usuario (`$auth.user` es `null` o `undefined`), no se muestra ningún módulo.
+// Si hay un usuario, solo se incluyen los módulos cuyo `allowedRoles` contenga el rol del usuario.
+$: filteredModules = modules
     .filter(module => $auth.user && module.allowedRoles.includes($auth.user.role));
+
 </script>
 
 <div class="module-grid">

@@ -1,23 +1,21 @@
-<script lang="ts">
-  import type { Module } from '../types';
-  import type { SvelteComponent } from 'svelte';
+<script>
+  import { navigate } from 'svelte-routing';
+  export let module;
+  export let icon;
 
-  // Props del componente
-  export let module: Module;
-  export let icon: typeof SvelteComponent;
-
-  // Manejador de clic
+    // Función que maneja la navegación al hacer clic en el módulo.
   function handleClick() {
-    console.log('Módulo seleccionado:', module.id);
-    // Aquí implementaremos la navegación más adelante
+    navigate(module.route);
   }
 </script>
 
 <div 
   class="module"
   on:click={handleClick}
+  on:keydown={(e) => e.key === 'Enter' && handleClick()} 
   role="button"
-  tabindex="0"
+  tabindex="0"      
+
 >
   <div class="module-icon">
     <div class="icon-circle">

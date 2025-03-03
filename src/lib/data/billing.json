@@ -1,0 +1,49 @@
+{
+  "invoices": [
+    {
+      "id": "INV-2024-001",
+      "client": "Empresa ABC",
+      "date": "2024-03-01",
+      "amount": 5000,
+      "status": "paid"
+    },
+    {
+      "id": "INV-2024-002",
+      "client": "Corporación XYZ",
+      "date": "2024-03-02",
+      "amount": 3500,
+      "status": "pending"
+    },
+    {
+      "id": "INV-2024-003",
+      "client": "Industrias 123",
+      "date": "2024-03-03",
+      "amount": 7800,
+      "status": "overdue"
+    },
+    {
+      "id": "INV-2024-004",
+      "client": "Tech Solutions",
+      "date": "2024-03-04",
+      "amount": 4200,
+      "status": "paid"
+    },
+    {
+      "id": "INV-2024-005",
+      "client": "Global Industries",
+      "date": "2024-03-05",
+      "amount": 6500,
+      "status": "pending"
+    }
+  ],
+  "payments": {
+    "received": 45678,
+    "pending": 12345,
+    "overdue": 7890
+  },
+  "stats": {
+    "issuedInvoices": 145,
+    "receivables": 67890,
+    "collectionRate": 98
+  }
+}

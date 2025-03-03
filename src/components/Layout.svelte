@@ -1,12 +1,13 @@
-<script lang="ts">
-  import { onMount } from 'svelte';
+<script>
+  import { onMount } from 'svelte';   // Importamos `onMount` de Svelte, que nos permite ejecutar código cuando el componente se monta en el DOM
+
   import { auth } from '../lib/stores/auth';
   import { navigate } from 'svelte-routing';
   import Sidebar from './Sidebar.svelte';
   import ModuleGrid from './ModuleGrid.svelte';
 
+    // Cuando el componente se monta, verificamos si el usuario está autenticado
   onMount(() => {
-    // Verificar autenticación
     if (!$auth.isAuthenticated) {
       navigate('/login', { replace: true });
     }

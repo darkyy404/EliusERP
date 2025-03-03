@@ -1,15 +1,13 @@
-import type { User } from '../stores/auth';
+// Definición de los módulos disponibles en la aplicación.
+// Cada módulo contiene:
+// - `id`: Identificador único del módulo.
+// - `title`: Nombre del módulo que se mostrará en la interfaz.
+// - `icon`: Nombre del icono asociado (debe coincidir con las claves en el objeto `icons`).
+// - `description`: Breve descripción del módulo.
+// - `route`: Ruta a la que se redirige al hacer clic en el módulo.
+// - `allowedRoles`: Lista de roles que tienen acceso a este módulo.
 
-export interface Module {
-  id: string;
-  title: string;
-  icon: string;
-  description: string;
-  route: string;
-  allowedRoles: Array<User['role']>;
-}
-
-export const modules: Module[] = [
+export const modules = [
   {
     id: 'ventas',
     title: 'Ventas',

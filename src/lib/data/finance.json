@@ -1,0 +1,49 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "description": "Pago de nómina",
+      "date": "2024-03-01",
+      "amount": -45000,
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "description": "Venta de servicios",
+      "date": "2024-03-02",
+      "amount": 12500,
+      "status": "completed"
+    },
+    {
+      "id": "3",
+      "description": "Pago de servicios",
+      "date": "2024-03-03",
+      "amount": -2300,
+      "status": "pending"
+    },
+    {
+      "id": "4",
+      "description": "Venta de productos",
+      "date": "2024-03-04",
+      "amount": 18500,
+      "status": "completed"
+    },
+    {
+      "id": "5",
+      "description": "Compra de equipos",
+      "date": "2024-03-05",
+      "amount": -8700,
+      "status": "completed"
+    }
+  ],
+  "summary": {
+    "totalIncome": 345678,
+    "totalExpenses": 234567,
+    "netBalance": 111111
+  },
+  "stats": {
+    "monthlyIncome": 234567,
+    "growth": 15.8,
+    "profitMargin": 82
+  }
+}
