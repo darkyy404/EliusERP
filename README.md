@@ -16,7 +16,7 @@ package.json: Configuración del proyecto y gestión de dependencias.
 
 vite.config.js / vite.config.ts: Configuración de Vite para el proyecto.
 
-.env: Variables de entorno (posible integración futura con una base de datos como Supabase).
+.env: Variables de entorno .
 
 📁 src/ - Código fuente
 
