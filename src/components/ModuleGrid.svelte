@@ -29,7 +29,7 @@ $: filteredModules = modules
       icon={icons[module.icon]}
     />
   {/each}
-  }
+  
 </div>
 
 <style>

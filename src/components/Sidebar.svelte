@@ -26,7 +26,7 @@
       {:else}
         <Moon size={20} />
       {/if}
-      }
+      
     </button>
     <button class="btn btn-primary" on:click={handleLogout}>
       Cerrar Sesión
